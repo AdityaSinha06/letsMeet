@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import SpeakerNotesOffIcon from "@mui/icons-material/SpeakerNotesOff";
 import { server } from "../environment.js";
 
-const server_url = `${server.prod}`;
+const server_url = `${server}`;
 
 var connections = {};
 var pendingCandidates = {};

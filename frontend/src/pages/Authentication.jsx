@@ -41,7 +41,7 @@ export default function Authentication() {
     };
 
     try {
-      let url = `${server.prod}/user/`;
+      let url = `${server}/user/`;
       url += formState === 0 ? "login" : "register";
 
       const response = await fetch(url, {

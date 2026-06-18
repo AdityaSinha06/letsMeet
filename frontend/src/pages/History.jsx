@@ -11,7 +11,7 @@ function History() {
   useEffect(() => {
     async function fetchAndSet() {
       try {
-        const url = `${server.prod}/user/get_all_activity?token=${localStorage.token}`;
+        const url = `${server}/user/get_all_activity?token=${localStorage.token}`;
         let response = await fetch(url, {
           method: "GET",
           headers: {

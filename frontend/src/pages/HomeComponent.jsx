@@ -15,7 +15,7 @@ function HomeComponent() {
 
   useEffect(() => {
     let findUsername = async () => {
-      const url = `${server.prod}/user/findUsername?token=${localStorage.token}`;
+      const url = `${server}/user/findUsername?token=${localStorage.token}`;
       let response = await fetch(url , {
         method: "GET",
         headers: {
@@ -37,7 +37,7 @@ function HomeComponent() {
     }
 
     try {
-      const url = `${server.prod}/user/add_to_activity`;
+      const url = `${server}/user/add_to_activity`;
       let response = await fetch(url, {
         method: "POST",
         headers: {
