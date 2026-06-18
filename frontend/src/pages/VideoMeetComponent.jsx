@@ -1,4 +1,4 @@
-import styles from "./videoMeetComponent.module.css";
+import styles from "./VideoMeetComponent.module.css";
 import { useRef, useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import VideocamIcon from "@mui/icons-material/Videocam";
