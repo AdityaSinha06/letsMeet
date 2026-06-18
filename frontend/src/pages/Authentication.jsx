@@ -60,7 +60,7 @@ export default function Authentication() {
         localStorage.setItem("token" , result.token);
         navigate("/home");
       } else {
-        console.log("server response : ", result);
+        //console.log("server response : ", result);
         setResMsg(result.message);
       }
 
@@ -69,7 +69,7 @@ export default function Authentication() {
       console.error("Error: ", error);
     }
 
-    console.log(formData);
+    //console.log(formData);
 
     setfullname("");
     setusername("");

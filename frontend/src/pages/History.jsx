@@ -23,11 +23,11 @@ function History() {
 
 
         const result = await response.json();
-        console.log(result);
+        //console.log(result);
 
         setMeetings(result);
       } catch (e) {
-        console.log(e);
+        //console.log(e);
       }
     }
 

@@ -102,7 +102,7 @@ export default function VideoMeetComponent() {
         }
       }
     } catch (er) {
-      console.log(er.message);
+      //console.log(er.message);
     }
   };
 
@@ -114,7 +114,7 @@ export default function VideoMeetComponent() {
     try {
       window.localStream.getTracks().forEach((track) => track.stop());
     } catch (e) {
-      console.log(e);
+      //console.log(e);
     }
 
     window.localStream = stream;
@@ -151,7 +151,7 @@ export default function VideoMeetComponent() {
               tracks.forEach((track) => track.stop());
             }
           } catch (e) {
-            console.log(e);
+            //console.log(e);
           }
 
           // TODO Blacksilence
@@ -215,7 +215,7 @@ export default function VideoMeetComponent() {
           tracks.forEach((track) => track.stop());
         }
       } catch (e) {
-        console.log(e.message);
+        //console.log(e.message);
       }
     }
   };
@@ -425,7 +425,7 @@ export default function VideoMeetComponent() {
     try {
       window.localStream.getTracks().forEach((track) => track.stop());
     } catch (e) {
-      console.log(e);
+      //console.log(e);
     }
 
     window.localStream = stream;
@@ -460,7 +460,7 @@ export default function VideoMeetComponent() {
               tracks.forEach((track) => track.stop());
             }
           } catch (e) {
-            console.log(e);
+            //console.log(e);
           }
 
           let blackSilence = (...args) =>
@@ -492,7 +492,7 @@ export default function VideoMeetComponent() {
   }, [screen]);
 
   let sendMessage = () => {
-    console.log(message);
+    //console.log(message);
     socketRef.current.emit("chat-message", message, username);
     setMessage("");
   };
@@ -516,7 +516,7 @@ export default function VideoMeetComponent() {
             delete connections[id];
           }
         } catch (err) {
-          console.log(err);
+          //console.log(err);
         }
       }
 
@@ -526,7 +526,7 @@ export default function VideoMeetComponent() {
           socketRef.current.disconnect();
         }
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
 
       setVideos([]);
@@ -534,9 +534,9 @@ export default function VideoMeetComponent() {
       setNewMessages(0);
       setAskForUsername(true);
     } catch (e) {
-      console.log(e);
+      //console.log(e);
     }
-    console.log(connections);
+    //console.log(connections);
     routeTo("/home");
   };
 
@@ -654,7 +654,7 @@ export default function VideoMeetComponent() {
           ></video>
 
           <div className={styles.conferenceView}>
-            {console.log(videos)}
+            {/* {console.log(videos)} */}
             {videos.map((video) => (
               <div key={video.socketId}>
                 {/* {console.log(video)}
