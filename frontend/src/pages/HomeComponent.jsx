@@ -6,6 +6,7 @@ import { IconButton, TextField } from "@mui/material";
 import RestoreIcon from "@mui/icons-material/Restore";
 import Button from "@mui/material/Button";
 import "./HomeComponent.css";
+import { server } from "../environment.js";
 
 function HomeComponent() {
   let navigate = useNavigate();
@@ -14,7 +15,7 @@ function HomeComponent() {
 
   useEffect(() => {
     let findUsername = async () => {
-      const url = `http://localhost:8000/user/findUsername?token=${localStorage.token}`;
+      const url = `${server.prod}/user/findUsername?token=${localStorage.token}`;
       let response = await fetch(url , {
         method: "GET",
         headers: {
@@ -36,7 +37,7 @@ function HomeComponent() {
     }
 
     try {
-      const url = "http://localhost:8000/user/add_to_activity";
+      const url = `${server.prod}/user/add_to_activity`;
       let response = await fetch(url, {
         method: "POST",
         headers: {

@@ -2,6 +2,7 @@ import WithAuth from "../utils/WithAuth";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { server } from "../environment.js";
 
 function History() {
   let [meetings, setMeetings] = useState([]);
@@ -10,7 +11,7 @@ function History() {
   useEffect(() => {
     async function fetchAndSet() {
       try {
-        const url = `http://localhost:8000/user/get_all_activity?token=${localStorage.token}`;
+        const url = `${server.prod}/user/get_all_activity?token=${localStorage.token}`;
         let response = await fetch(url, {
           method: "GET",
           headers: {

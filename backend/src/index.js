@@ -17,7 +17,7 @@ const server = createServer(app);
 const io = connectToSocket(server);
 
 const main = async () => {
-    await mongoose.connect(uri)
+    await mongoose.connect(`${uri}`)
         .then((res) => console.log("DB connection success"))
         .catch((err) => console.log(err.message))
 };

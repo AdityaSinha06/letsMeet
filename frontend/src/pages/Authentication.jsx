@@ -4,6 +4,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Button from "@mui/material/Button";
 import Input from "@mui/material/Input";
 import { useNavigate } from "react-router-dom";
+import server from "../environment.js";
 
 export default function Authentication() {
   let [formState, setformState] = useState(0);
@@ -40,7 +41,7 @@ export default function Authentication() {
     };
 
     try {
-      let url = "http://localhost:8000/user/";
+      let url = `${server.prod}/user/`;
       url += formState === 0 ? "login" : "register";
 
       const response = await fetch(url, {
