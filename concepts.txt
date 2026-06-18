@@ -1,0 +1,52 @@
+Important terms: 
+
+-sockets: 
+--one end of a connection. (the connection bw 2 machines)
+--format : ip + port :: <ip>:<port>
+
+-protocols:
+--tcp : connection - based , slow , reliable , ensures data integrity , eg : message sharing , google drive , messaging apps
+--udp : connection - less , fast , no reliability , data integrity is not ensured , eg : video / audio calls , real-time communication 
+
+--in video calls : data is transferred in frames
+
+---webRTC (web real time communication) - tech used for video communication , 
+-primarily built on UDP
+-open source protocol
+-serverless
+-forms a bi-directional connection :: [machine A] <------------> [machine B] : this increases speed
+---idea : form a serverless bi-directional connection bw the machines so that communication can be made at fast rates
+
+--How does it work?
+[mA] <----webRTC---> [mB]
+-4-stages 
+-1. signalling : [signalling server : uses SDP]: initially, the machines don't know wheabouts of each but this server does, so this server shares with each , with a -- b , with b -- a's details
+-2. connecting : [ICE protocol used] : now, both machines got info of each 
+-3. securing : [DLTS , SRTP] : connection bw the machines is made secured : encryption .. is done!
+-4. communicating : [RTP , SCTP] : they communicate 
+
+--browsers already have webRTC in the form of apis , need not to implement these stages from scratch
+---which apis to use , when and where and why. these must be well-researched.
+
+------------CORS-----------
+-cors : cross-origin-resource-origin
+: this allows frontend to access the data at backend apis when they are hosted on different origins
+: technically, we use cors() to explicitly grant permission for a frontend web app to securely read data from a backend API when they are hosted on different origins.
+: In frameworks like Express.js , executing app.use(cors()) configures your backend server to inject the proper HTTP headers required to bypass the browser's default strict security blocks.
+
+: by default , web-browsers strictly enforce a core security mechanism known as the Same-Origin Policy.
+: Definition of "Origin": An origin is defined by the combination of the Protocol (HTTP vs HTTPS), Domain (example.com vs api.com), and Port (3000 vs 5000)
+: The Restriction: If your frontend runs on http://localhost:3000 and attempts to fetch data from a backend on http://localhost:5000, the browser sees them as different origins. Out of caution, it will automatically block the frontend from reading the backend's response
+: The Solution: Why We Need cors() :: Without a mechanism to loosen the Same-Origin Policy, decoupling your web application into a separate modern client and API backend would be impossible. Using cors() provides crucial capabilities:
+: Enables Cross-Origin Communication: It explicitly tells the browser that your server permits specified external domains to request and read its resources.
+: Injects Security Headers: The cors() middleware automatically appends essential response headers such as Access-Control-Allow-Origin, which lists the specific domains allowed to look at the data.
+
+
+------------STUN servers-----------
+:a lightweight network server that helps devices operating behind a router or firewall discover their own public IP address and port number. Think of it like a digital mirror. A device sends a packet to the STUN server, and the server simply looks at the packet and replies, "Here is the public address and port I received your message from.".
+
+:This process is critical for establishing peer-to-peer (P2P) connections in real-time communication systems. Because routers use NAT (Network Address Translation) to assign private IP addresses to local devices, those devices do not inherently know how they appear to the public internet. By revealing a device's public-facing credentials, a STUN server allows application protocols to establish direct data paths between users
+
+------------useRef()---------------
+: a react hook that persists data value upon re-renders (value remains same upon re-renders), the referenced value can be changed only using direct mutation , and that mutation won't trigger a re-render like useState
+: it is a mutable object with a single property : {current : value}.

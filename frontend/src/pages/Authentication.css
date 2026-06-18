@@ -1,0 +1,42 @@
+.authContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.authBackground {
+    height: 100%;
+    width: 60%;
+    background: url("https://i1.pickpik.com/photos/190/527/808/beach-ocean-pink-sea-eaa387a9076218de2d28776e98730ca4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.authDiv {
+    height: 100%;
+    width: 40%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authForm {
+    margin-top: 20px;
+}
+
+.authForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.authForm form button {
+    height: 28px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}

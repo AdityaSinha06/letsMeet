@@ -1,0 +1,12 @@
+flowchart : 
+
+-[landing page] <---> [auth page | JWT based] <----> [home / dashboard] <---> [meeting homepage] <--->  video call
+
+-[auth page] : JWT based : after signup save to db , then ask for login separately
+-[home / dashboard] : home page for logged in users : show options like create meeting
+
+
+--> technologies used : 
+-data : mongodb
+-backend : bcrypt , crypto , socket , express JS
+-frontend : material ui , webrtc , react , axios , css 

@@ -1,0 +1,52 @@
+.landingPageContainer {
+    height: 100vh;   
+    width: 100vw;
+    background: url("/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+}
+
+.landingPageContainer nav {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menus {
+    width: auto;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.menus a {
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+}
+
+.divBtn {
+    color: white;
+    font-weight: 700;
+    background-color: rgb(206, 138, 12);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.LandingMainContainer {
+    height: 75vh;
+    display: flex;
+    padding-inline: 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: large;
+}

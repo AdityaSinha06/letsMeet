@@ -1,0 +1,26 @@
+.historyContainer {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.homeNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 25px;
+    padding-block: 5px;
+    background-color: black;
+    color: azure;
+}
+
+.historyMainContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.meeting {
+    padding: 20px;
+    border-bottom: 1px solid grey;
+}
