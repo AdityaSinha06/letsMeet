@@ -3,6 +3,8 @@ import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import server  from "../environment.js";
+import { Link } from "react-router-dom";
+
 
 function History() {
   let [meetings, setMeetings] = useState([]);
@@ -36,13 +38,13 @@ function History() {
     <div className="historyContainer">
       <nav className="homeNav">
         <div className="logoDiv">
-          <a href="" style={{ textDecoration: "none", color: "azure" }}>
+          <Link to="" style={{ textDecoration: "none", color: "azure" }}>
             <h2>letsCHAT Video Call</h2>
-          </a>
+          </Link>
         </div>
 
         <div className="menus">
-            <a href="/home">Home</a>
+            <Link to="/home">Home</Link>
 
           <Button
             variant="contained"

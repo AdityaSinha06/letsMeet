@@ -7,6 +7,7 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import Button from "@mui/material/Button";
 import "./HomeComponent.css";
 import  server  from "../environment.js";
+import { Link } from "react-router-dom";
 
 function HomeComponent() {
   let navigate = useNavigate();
@@ -60,16 +61,16 @@ function HomeComponent() {
       <div className="homeContainer">
         <nav className="homeNav">
           <div className="logoDiv">
-            <a href="" style={{ textDecoration: "none", color: "azure" }}>
+            <Link to="" style={{ textDecoration: "none", color: "azure" }}>
               <h2>letsCHAT Video Call</h2>
-            </a>
+            </Link>
           </div>
 
           <div className="menus">
-            <a href="/getHistory" style={{ textDecoration: "none" }}>
+            <Link to="/getHistory" style={{ textDecoration: "none" }}>
               <i className="fa-solid fa-clock-rotate-left"></i>
               <span>History</span>
-            </a>
+            </Link>
 
             <Button
               variant="contained"

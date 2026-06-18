@@ -6,21 +6,23 @@ export default function Landing() {
         <div className="landingPageContainer">
             <nav>
                 <div className="logoDiv">
-                    <a href="" style={{textDecoration:"none" , color:"#fff"}}><h2>letsCHAT Video Call</h2></a>
+                    <Link to="" style={{textDecoration:"none" , color:"#fff"}}><h2>letsCHAT Video Call</h2></Link>
                 </div>
 
                 <div className="menus">
                     {/* <a href="/joinasGuest">
                         Join as Guest
                     </a> */}
+                    
+                    {/* <Link to="/auth">Register</Link> */}
 
-                    <a href="/auth">
+                    <Link to="/auth">
                         Register
-                    </a>
+                    </Link>
 
-                    <a href="/auth">
+                    <Link to="/auth">
                         <button style={{width:"80px",height:"25px"}} className='divBtn'>Login</button>
-                    </a>
+                    </Link>
                 </div>
             </nav>
 
