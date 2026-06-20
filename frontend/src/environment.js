@@ -1,5 +1,5 @@
-const isProd = false;
+const isProd = true;
 
-const server = isProd ? "https://letschat-backend-dw45.onrender.com" : "http://localhost:8000"
+const server = isProd ? "https://letsmeet-backend-ko66.onrender.com" : "http://localhost:8000"
 
 export default server;
